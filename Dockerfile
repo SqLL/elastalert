@@ -24,7 +24,7 @@ RUN sed -i 's/jira>=1.0.10/jira>=1.0.10,<1.0.15/g' setup.py && \
     python setup.py install && \
     pip install -r requirements.txt
 
-FROM node:alpine
+FROM node:lts-jessie
 LABEL maintainer="BitSensor <dev@bitsensor.io>"
 # Set timezone for this container
 ENV TZ Etc/UTC
